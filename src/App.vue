@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <navbar msg="Bill Split" btn="Add Event" />
+  <div class="flex flex-row flex-wrap justify-between mx-24">
+    <eventBox class="w-full h-auto m-6" eventName="Trip" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import navbar from "./components/nav-bar.vue";
+import eventBox from "./components/event-box.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    navbar,
+    eventBox,
+  },
+  data() {
+    return {
+      events: 0,
+    };
+  },
+  methods: {},
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
